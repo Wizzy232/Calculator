@@ -53,8 +53,8 @@ public class Calculator{
 		outPut = new JTextArea(1, 20); //Makes the ouput area
 		outPut.setEditable(false); //Disallows users from entering values directly into result
 
-		result = new Label("0", result.RIGHT);
-		result.setFont(bigFont);
+		result = new Label("0", result.RIGHT);//Set the initial text of label to 0 and align right
+		result.setFont(bigFont);//Set the font of result to big font
 
 		framePanel = new JPanel(); //instantiate the frame panel
 		framePanel.setLayout(new BoxLayout(framePanel, BoxLayout.Y_AXIS));//Set the layout manager for the frame panel
