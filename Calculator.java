@@ -55,6 +55,13 @@ public class Calculator{
 		framePanel.add(output); //Add the result screen to the frame panel
 		framePanel.add(mainPanel); //Add the main panel to the frame panel
 
+		frame = new JFrame("Calculator"); //Instantiated the JFrame
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //Set the JFrame close operation
+		frame.setContentPane(framePanel); //Set the content pane of the JFrame
+
+		frame.setSize(500, 500); ///Set the size
+		frame.setVisible(true); //Made visible
+
 	}//end go method
 
 
