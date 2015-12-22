@@ -28,9 +28,10 @@ public class Calculator{
 
 	public void go(){
 
-		
+		GridLayout grid = new GridLayout(4, 4); //Grid layout for buttons
+		buttonPanel = new JPanel(grid); //Set the layout manager for the button panel to grid layout
 
-	}//end go methos
+	}//end go method
 
 
 
