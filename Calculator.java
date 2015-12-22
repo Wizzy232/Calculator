@@ -11,7 +11,7 @@ public class Calculator{
 	//Define instance variables
 	JFrame frame; //The calculator window
 	JPanel framePanel; //Content pane of the frame
-	JPanel mainPane; //Where the output and buttons will stay
+	JPanel mainPanel; //Where the output and buttons will stay
 	JTextArea outPut; //Where the result will show
 	JPanel buttonPanel; //Panel for the JButtons
 	JButton clear; //Clear button;
@@ -40,6 +40,11 @@ public class Calculator{
 			//System.out.println("button added");       //Test for button creation
 
 		}//Close for loop
+
+		clear = new JButton("Clear"); //Instantiated the clear button so I can add it to the main panel
+
+		BorderLayout layout = new BorderLayout(); //Layout manager for the main panel
+		mainPanel = new JPanel(layout); //Instantiated main panel and added the new layout manager
 
 	}//end go method
 
