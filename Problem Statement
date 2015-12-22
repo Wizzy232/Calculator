@@ -3,11 +3,11 @@ Create a java calculator that take input through button and produces the output 
 
 Problem Requirement
 The calculator should have buttons 0 to 9 and a . for decimals
-The calculator should have a operation buttons (+, -, /, x, =, clear and del)
+The calculator should have a operation buttons (+, -, /, x, =, ac and del)
 The calculator should have an output screen
 
 Additional features will be added later
 
 As the user presses any button the button value should show on the output screen when the user click enter the output screen should clear and should show the total
 
-The clear button should clear the screen and return the original output to 0
+The ac button should clear the screen and return the original output to 0
