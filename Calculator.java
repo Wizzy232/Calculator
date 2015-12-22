@@ -15,6 +15,7 @@ public class Calculator{
 	JTextArea outPut; //Where the result will show
 	JPanel buttonPanel; //Panel for the JButtons
 	JButton clear; //Clear button;
+	JLabel result; //Large label that show the result of an operation
 	String[] buttonNames = {"7", "8", "9", "+", "4", "5", "6", "-", "1", "2", "3", "/", "0", ".", "=", "x"}; //Contains the label that should show on all the buttons in the appropriate order
 	
 	public static void main(String[] args) {
@@ -48,6 +49,7 @@ public class Calculator{
 		mainPanel.add(BorderLayout.SOUTH, clear); //Adds the clear button to the south of the mainpanel
 
 		outPut = new JTextArea(1, 20); //Makes the ouput area
+		outPut.setEditable(false); //Disallows users from entering values directly into result
 
 		framePanel = new JPanel(); //instantiate the frame panel
 		framePanel.setLayout(new BoxLayout(framePanel, BoxLayout.Y_AXIS));//Set the layout manager for the frame panel
