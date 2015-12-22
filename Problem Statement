@@ -10,4 +10,4 @@ Additional features will be added later
 
 As the user presses any button the button value should show on the output screen when the user click enter the output screen should clear and should show the total
 
-The ac button should clear the screen and return the original output to 0
+The ac button should clear the screen and return the original output to 0.
