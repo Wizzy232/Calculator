@@ -29,7 +29,16 @@ public class Calculator{
 	public void go(){
 
 		GridLayout grid = new GridLayout(4, 4); //Grid layout for buttons
+		grid.setVgap(1); //Set the vertical gap between the buttons
+		grid.setHgap(2); //Set the horizonatal gap between the buttons
 		buttonPanel = new JPanel(grid); //Set the layout manager for the button panel to grid layout
+
+		for(int i = 0; i < buttonNames.length; i++){ //Loop to create the 10 buttons
+
+			JButton button = new JButton(buttonNames[i]);
+			buttonPanel.add(button);
+
+		}//Close for loop
 
 	}//end go method
 
