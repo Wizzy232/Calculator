@@ -1,0 +1,35 @@
+Only one class is needed that is the calculator class
+Now when a users clicks one of the buttons from 0 to 9
+The value should display on the output
+The 10 buttons should have the same action lister
+We shall use the .getActionCommand() method to know which button was clicked
+A typical button is going to be created like this
+JButton button = new JButton("1");
+so lets say the user clicks on that button
+we could now say
+String button = event.getActionCommand();
+now the message
+we already have a string called message which is empty initially
+we then say message = message + button + " ";
+now the string contains 1
+lets now say the user click on add 
+message = message + add + " "
+message now contains 1 + 
+we would change the text on the textarea each time this happens
+
+Now the calculation
+
+When a user clicks a number the number would be stored in the string digits
+and the message would be created as before
+
+But when the user click on an operator which is not equals the value of digit is converted into a double
+this value it then added to the array list numbers and the operation is added to another arraylist operation
+
+the string digit is then cleared as it awaits another input this process continues until the equal to button is pressed
+When the eqaul to button is pressed the digit is still converted to double and passed to the array list numbers but
+the operation is not passed. 
+
+We then make a double called total to be equal to numbers[0]
+
+Now we start looping starting with i as 1 and operation as 0 we begin to compute every computation returns a total at the
+end of the loop the value of total is then printed to the screen
