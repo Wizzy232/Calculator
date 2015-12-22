@@ -15,7 +15,7 @@ public class Calculator{
 	JTextArea outPut; //Where the result will show
 	JPanel buttonPanel; //Panel for the JButtons
 	JButton clear; //Clear button;
-	JLabel result; //Large label that show the result of an operation
+	Label result; //Large label that show the result of an operation
 	String[] buttonNames = {"7", "8", "9", "+", "4", "5", "6", "-", "1", "2", "3", "/", "0", ".", "=", "x"}; //Contains the label that should show on all the buttons in the appropriate order
 	
 	public static void main(String[] args) {
@@ -27,7 +27,7 @@ public class Calculator{
 
 	public void go(){
 
-		Font bigFont = new Font("sanserif", Font.BOLD, 24); //Create font to be used by components
+		Font bigFont = new Font("sanserif", Font.BOLD, 100); //Create font to be used by components
 
 		GridLayout grid = new GridLayout(4, 4); //Grid layout for buttons
 		grid.setVgap(1); //Set the vertical gap between the buttons
@@ -53,10 +53,14 @@ public class Calculator{
 		outPut = new JTextArea(1, 20); //Makes the ouput area
 		outPut.setEditable(false); //Disallows users from entering values directly into result
 
+		result = new Label("0", result.RIGHT);
+		result.setFont(bigFont);
+
 		framePanel = new JPanel(); //instantiate the frame panel
 		framePanel.setLayout(new BoxLayout(framePanel, BoxLayout.Y_AXIS));//Set the layout manager for the frame panel
 
 		framePanel.add(outPut); //Add the result screen to the frame panel
+		framePanel.add(result);
 		framePanel.add(mainPanel); //Add the main panel to the frame panel
 
 		frame = new JFrame("Calculator"); //Instantiated the JFrame
