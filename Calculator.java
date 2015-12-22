@@ -15,10 +15,8 @@ public class Calculator{
 	JTextArea outPut; //Where the result will show
 	JPanel buttonPanel; //Panel for the JButtons
 	JButton clear; //Clear button;
-	String[] buttonNames = {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9"}; //Contains the label that should show on all the number buttons
-	String[] operationNames = {"+", "-", "/", "x"};//Contains the label that should show on all the operation buttons
-
-
+	String[] buttonNames = {"7", "8", "9", "+", "4", "5", "6", "-", "1", "2", "3", "/", "0", ".", "=", "x"}; //Contains the label that should show on all the buttons in the appropriate order
+	
 	public static void main(String[] args) {
 		
 		Calculator gui = new Calculator();
@@ -37,7 +35,7 @@ public class Calculator{
 
 			JButton button = new JButton(buttonNames[i]);
 			buttonPanel.add(button);
-			//System.out.println("button added");       //Test for button creation
+			//System.out.println("button added" + buttonNames[i]);       //Test for button creation
 
 		}//Close for loop
 
@@ -45,6 +43,9 @@ public class Calculator{
 
 		BorderLayout layout = new BorderLayout(); //Layout manager for the main panel
 		mainPanel = new JPanel(layout); //Instantiated main panel and added the new layout manager
+
+		mainPanel.add(BorderLayout.CENTER, buttonPanel); //Adds the button panel to the center of the mainpanel
+		mainPanel.add(BorderLayout.SOUTH, clear); //Adds the clear button to the south of the mainpanel
 
 	}//end go method
 
