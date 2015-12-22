@@ -37,6 +37,7 @@ public class Calculator{
 
 			JButton button = new JButton(buttonNames[i]);
 			buttonPanel.add(button);
+			//System.out.println("button added");       //Test for button creation
 
 		}//Close for loop
 
