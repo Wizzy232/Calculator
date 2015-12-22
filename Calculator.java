@@ -47,6 +47,8 @@ public class Calculator{
 		mainPanel.add(BorderLayout.CENTER, buttonPanel); //Adds the button panel to the center of the mainpanel
 		mainPanel.add(BorderLayout.SOUTH, clear); //Adds the clear button to the south of the mainpanel
 
+		output = new JTextArea(1, 20); //Makes the ouput area
+
 	}//end go method
 
 
