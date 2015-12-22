@@ -49,6 +49,12 @@ public class Calculator{
 
 		output = new JTextArea(1, 20); //Makes the ouput area
 
+		framePanel = new JPanel(); //instantiate the frame panel
+		framePanel.setLayout(new BoxLayout(framePanel, BoxLayout.Y_AXIS));//Set the layout manager for the frame panel
+
+		framePanel.add(output); //Add the result screen to the frame panel
+		framePanel.add(mainPanel); //Add the main panel to the frame panel
+
 	}//end go method
 
 
