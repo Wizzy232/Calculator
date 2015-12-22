@@ -1,0 +1,19 @@
+The caculator gui tree
+
+---------------------------Frame---------------------------
+                   |                        |
+-----------------Output-----------------Main Panel----------
+									  |					|							
+--------------------------------Button Panel----------Button
+
+The button panel uses the grid layout manager of 4 by 4
+The button uses no layout manager because its a button
+
+The button panel and button will both be added to the main panel the main panel uses the borderBox layout
+The button panel would be added to the middle
+The button would be added  to the south
+
+The output would a JTextArea which is not editable
+The output and main panel would be added to the panel which is the frames content pane
+This panel would have a box layout of vertical 
+
