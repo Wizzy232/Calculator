@@ -59,7 +59,7 @@ public class Calculator{
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //Set the JFrame close operation
 		frame.setContentPane(framePanel); //Set the content pane of the JFrame
 
-		frame.setSize(500, 500); ///Set the size
+		frame.setSize(300, 500); ///Set the size
 		frame.setVisible(true); //Made visible
 
 	}//end go method
