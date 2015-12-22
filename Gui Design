@@ -17,3 +17,7 @@ The output would a JTextArea which is not editable
 The output and main panel would be added to the panel which is the frames content pane
 This panel would have a box layout of vertical 
 
+
+Addition
+Add a label which would hold the total
+
