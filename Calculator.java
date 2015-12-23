@@ -141,7 +141,7 @@ public class Calculator{
 
 	public void setListener(JButton buttons, String name){ //Method to set the action listener of a button based on its name
 
-		String[] numbers = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10"};
+		String[] numbers = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "."};
 		String[] operators = {"+", "-", "/", "x"};
 		String[] equals = {"="};
 
@@ -157,7 +157,7 @@ public class Calculator{
 
 		}
 
-		else if(isIn(operators, name)){
+		else if(isIn(equals, name)){
 
 			buttons.addActionListener(new resultListener());
 
