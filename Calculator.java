@@ -17,7 +17,8 @@ public class Calculator{
 	JButton clear; //Clear button;
 	Label result; //Large label that show the result of an operation
 	String[] buttonNames = {"7", "8", "9", "+", "4", "5", "6", "-", "1", "2", "3", "/", "0", ".", "=", "x"}; //Contains the label that should show on all the buttons in the appropriate order
-	
+	String message; //A string to contain what the user see when he or she pushes a button
+
 	public static void main(String[] args) {
 		
 		Calculator gui = new Calculator();
@@ -38,6 +39,7 @@ public class Calculator{
 
 			JButton button = new JButton(buttonNames[i]);//Creates new buttons with the names in the button names array
 			button.setBackground(new Color(255, 255, 255));//Set the background color of the buttons to white
+			button.addActionListener(new buttonListener());//Adds the button listener to all buttons
 			buttonPanel.add(button);//Add the buttons to be button panel which has a grid layout gui
 			//System.out.println("button added" + buttonNames[i]);       //Test for button creation
 
@@ -77,6 +79,16 @@ public class Calculator{
 
 	}//end go method
 
+ 	class buttonListener implements ActionListener{ //Inner class
+
+ 		public void actionPerformed(ActionEvent event){ //Method triggered with button is clicked
+
+ 			System.out.println("I have been clicked"); //Test to check if button is pressed
+ 			outPut.setText(event.getActionCommand());//Test to check if button value appears on output screen above the label
+
+ 		}//Close action performed method
+
+ 	}//Close inner class
 
 
 }//end calculator class
