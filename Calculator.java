@@ -228,7 +228,7 @@ public class Calculator{
 
 	}
 
-	public void printArray(ArrayList<Integer> num, ArrayList<Double> values){
+	/*public void printArray(ArrayList<Integer> num, ArrayList<Double> values){
 
 		for(int i = 0; i < num.size(); i++){
 
@@ -242,7 +242,7 @@ public class Calculator{
 
 		}
 
-	}
+	}*/
 
 
 
