@@ -50,6 +50,7 @@ public class Calculator{
 
 			JButton button = new JButton(buttonNames[i]);//Creates new buttons with the names in the button names array
 			button.setBackground(new Color(255, 255, 255));//Set the background color of the buttons to white
+			setListener(button, buttonNames[i]); //Set the action listener based on the type of button
 			buttonPanel.add(button);//Add the buttons to be button panel which has a grid layout gui
 			//System.out.println("button added" + buttonNames[i]);       //Test for button creation
 
@@ -118,6 +119,52 @@ public class Calculator{
 		} //Close action performed method for the result listener
 
 	} //close result listener inner class
+
+
+	public boolean isIn(String[] stringArray, String name){ //Method to check if a string is in an array of strings
+
+		boolean result = false;
+
+		for(int i = 0; i < stringArray.length; i++){
+
+			if(stringArray[i].equals(name)){
+
+				result == true;
+
+			}
+
+		}
+
+		return result;
+
+	}
+
+	public void setListener(JButton buttons, String name){ //Method to set the action listener of a button based on its name
+
+		String[] numbers = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10"};
+		String[] operators = {"+", "-", "/", "x"};
+		String[] equals = {"="};
+
+		if(isIn(numbers, name)){
+
+			buttons.addActionListener(new numberListener());
+
+		}
+
+		else if(isIn(operators, name)){
+
+			buttons.addActionListener(new operatorListener());
+
+		}
+
+		else if(isIn(operators, name)){
+
+			buttons.addActionListener(new resulListener());
+
+		}
+
+	}
+
 
 
 }//end calculator class
