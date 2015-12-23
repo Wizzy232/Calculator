@@ -170,6 +170,13 @@ public class Calculator{
 			numbers.add(number);
 			double ans = compute(operators, numbers);
 			result.setText("" + ans);
+			message = "";
+			outPut.setText(message);
+			digit = "";
+			number = 0;
+			numbers = new ArrayList<Double>();
+			operators = new ArrayList<Integer>();
+
 
 		} //Close action performed method for the result listener
 
