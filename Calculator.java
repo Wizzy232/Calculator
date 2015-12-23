@@ -30,7 +30,7 @@ public class Calculator{
 		Font bigFont = new Font("sanserif", Font.BOLD, 50); //Create font to be used by components
 
 		GridLayout grid = new GridLayout(4, 4); //Grid layout for buttons
-		grid.setVgap(1); //Set the vertical gap between the buttons
+		grid.setVgap(1); //Set the vertical gap bemtween the buttons
 		grid.setHgap(2); //Set the horizonatal gap between the buttons
 		buttonPanel = new JPanel(grid); //Set the layout manager for the button panel to grid layout
 
