@@ -58,6 +58,7 @@ public class Calculator{
 
 		clear = new JButton("Clear"); //Instantiated the clear button so I can add it to the main panel
 		clear.setBackground(new Color(255, 255, 255)); //Sets the background color of the clear button to white
+		clear.addActionListener(new clearListener()); //add an action listener for the clear button
 
 		BorderLayout layout = new BorderLayout(); //Layout manager for the main panel
 		mainPanel = new JPanel(layout); //Instantiated main panel and added the new layout manager
@@ -119,6 +120,16 @@ public class Calculator{
 		} //Close action performed method for the result listener
 
 	} //close result listener inner class
+
+	public class clearListener implements ActionListener{//Event listener for the clear button
+
+		public void actionPerformed(ActionEvent event){//Method that is fired the the clear button is clicked
+
+			System.out.println("I am " + event.getActionCommand()); //Test to see if the listener goes to the clear button			
+
+		} //close action performed method for clear listener
+
+	} //close clear listener inner class
 
 
 	public boolean isIn(String[] stringArray, String name){ //Method to check if a string is in an array of strings
