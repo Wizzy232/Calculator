@@ -22,7 +22,7 @@ public class Calculator{
 	double number; //Contains the number the digit is transformed to after an operator is clicked on
 	double total; //Contains the result to be displayed as final answer
 	ArrayList<Double> numbers; //Contains the numbers the user has clicked on
-	ArrayList<Integer> operation; //Contains all the operation that should be performed on the number
+	ArrayList<Integer> operators; //Contains all the operation that should be performed on the number
 	final int ADDITION = 1; //Int code for addition
 	final int SUBTRACTION = 2; //Int code for subtraction
 	final int DIVISION = 3; //Int code for division
@@ -119,6 +119,7 @@ public class Calculator{
 
 				numbers.add(number); //Adds the number to the array list of numbers
 				operators.add(ADDITION); //Adds the operation to the array list of operators
+				System.out.println("added " + number + " to numbers and " + event.getActionCommand() + " to operators");
 
 			}//Close if block
 
@@ -126,6 +127,7 @@ public class Calculator{
 
 				numbers.add(number); //Adds the number to the array list of numbers
 				operators.add(SUBTRACTION); //Adds the operation to the array list of operators
+				System.out.println("added " + number + " to numbers and " + event.getActionCommand() + " to operators");
 
 			} //close else if block
 
@@ -133,6 +135,7 @@ public class Calculator{
 
 				numbers.add(number); //Adds the number to the array list of numbers
 				operators.add(DIVISION); //Adds the operation to the array list of operators
+				System.out.println("added " + number + " to numbers and " + event.getActionCommand() + " to operators");
 
 			} //Close else if block
 
@@ -140,6 +143,7 @@ public class Calculator{
 
 				numbers.add(number); //Adds the number to the array list of numbers
 				operators.add(MULTIPLICATION); //Adds the operation to the array list of operators
+				System.out.println("added " + number + " to numbers and " + event.getActionCommand() + " to operators");
 
 			}//end of else if block
 
