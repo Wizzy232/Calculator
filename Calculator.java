@@ -109,6 +109,7 @@ public class Calculator{
 
 			//System.out.println("I am " + event.getActionCommand() + " and I am an operator"); //Test to see if the listener goes to the right operator
 			message = message + " " + event.getActionCommand() + " ";
+			outPut.setText(message);
 
 		} //Close action performed method for the operator listener
 
