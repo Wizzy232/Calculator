@@ -165,6 +165,12 @@ public class Calculator{
 			//System.out.println("I am " + event.getActionCommand() + " and I am a result finder"); //Test to see if the listener goes to the equal to button
 			//printArray(operators, numbers); //Test to check if the numbers and operators are in the right array
 
+			number = Double.parseDouble(digit);//Get the value for calculation from digit
+			digit = "";//Initializies digit to empty
+			numbers.add(number);
+			double ans = compute(operators, numbers);
+			result.setText("" + ans);
+
 		} //Close action performed method for the result listener
 
 	} //close result listener inner class
