@@ -178,6 +178,7 @@ public class Calculator{
 			digit = ""; //assigns digit to empty
 			outPut.setText(message); //Clears all the message on the ouput screen
 			result.setText("0"); //assigns total to empty
+			//number = 0; //resets number to zero
 
 		} //close action performed method for clear listener
 
@@ -243,6 +244,47 @@ public class Calculator{
 		}
 
 	}*/
+
+	public double compute(ArrayList<Integer> op, ArrayList<Double> val){//Method to perform calculations on the number in an array with the operations
+
+		total = val.get(0); //assigns the first value to total
+		for(int i = 1; i <= op.size(); i++){ //For loop to compute all the values in the array with the given operation
+
+			if(op.get(i - 1) == ADDITION){//If block to check if operation is addition
+
+				total = total + val.get(i);
+
+			} //close if block
+
+			else if(op.get(i - 1) == SUBTRACTION){ //If block to check if operation is subtraction
+
+				total = total - val.get(i);
+
+			} // close if block
+
+			else if(op.get(i - 1) == DIVISION){ //If block to check if operation is division
+
+				total = total / val.get(i);
+
+			} // close if block
+
+			else if(op.get(i - 1) == MULTIPLICATION){ //If block to check if operation is multiplication
+
+				total = total * val.get(i);
+
+			} //close if block
+
+			else{
+
+				System.out.println("Calculation parameters are wrong");
+
+			}
+
+		} // close loop
+
+		return total;
+
+	}// Close method
 
 
 
