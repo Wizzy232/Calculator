@@ -21,8 +21,8 @@ public class Calculator{
 	String digit = ""; //Contains each number just before the operator is clicked
 	double number; //Contains the number the digit is transformed to after an operator is clicked on
 	double total; //Contains the result to be displayed as final answer
-	ArrayList<Double> numbers; //Contains the numbers the user has clicked on
-	ArrayList<Integer> operators; //Contains all the operation that should be performed on the number
+	ArrayList<Double> numbers = new ArrayList<Double>(); //Contains the numbers the user has clicked on
+	ArrayList<Integer> operators = new ArrayList<Double>(); //Contains all the operation that should be performed on the number
 	final int ADDITION = 1; //Int code for addition
 	final int SUBTRACTION = 2; //Int code for subtraction
 	final int DIVISION = 3; //Int code for division
@@ -116,9 +116,9 @@ public class Calculator{
 			//System.out.println("The digit to work with is " + number); //Test to check if the digit was gotten
 
 			if(event.getActionCommand().equals("+")){//if statement to check if the operation is addition
-
+				System.out.println("Here");
 				numbers.add(number); //Adds the number to the array list of numbers
-				operators.add(ADDITION); //Adds the operation to the array list of operators
+				operators.add(1); //Adds the operation to the array list of operators
 				System.out.println("added " + number + " to numbers and " + event.getActionCommand() + " to operators");
 
 			}//Close if block
