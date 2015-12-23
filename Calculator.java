@@ -28,7 +28,6 @@ public class Calculator{
 	public void go(){
 
 		Font bigFont = new Font("sanserif", Font.BOLD, 50); //Create font to be used by components
-		Font mediumFont = new Font("sanserif", 25);
 
 		GridLayout grid = new GridLayout(4, 4); //Grid layout for buttons
 		grid.setVgap(1); //Set the vertical gap between the buttons
@@ -38,7 +37,6 @@ public class Calculator{
 		for(int i = 0; i < buttonNames.length; i++){ //Loop to create the 10 buttons
 
 			JButton button = new JButton(buttonNames[i]);
-			button.setFont(mediumFont);
 			buttonPanel.add(button);
 			//System.out.println("button added" + buttonNames[i]);       //Test for button creation
 
