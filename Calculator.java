@@ -163,7 +163,7 @@ public class Calculator{
 		public void actionPerformed(ActionEvent event){ //Method that is fired when the equal to button is fired
 
 			//System.out.println("I am " + event.getActionCommand() + " and I am a result finder"); //Test to see if the listener goes to the equal to button
-			printArray(operators, numbers); //Test to check if the numbers and operators are in the right array
+			//printArray(operators, numbers); //Test to check if the numbers and operators are in the right array
 
 		} //Close action performed method for the result listener
 
