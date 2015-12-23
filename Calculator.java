@@ -116,10 +116,11 @@ public class Calculator{
 			//System.out.println("The digit to work with is " + number); //Test to check if the digit was gotten
 
 			if(event.getActionCommand().equals("+")){//if statement to check if the operation is addition
-				System.out.println("Here");
+				
+				//System.out.println("Here");
 				numbers.add(number); //Adds the number to the array list of numbers
 				operators.add(1); //Adds the operation to the array list of operators
-				System.out.println("added " + number + " to numbers and " + event.getActionCommand() + " to operators");
+				//System.out.println("added " + number + " to numbers and " + event.getActionCommand() + " to operators");
 
 			}//Close if block
 
@@ -127,7 +128,7 @@ public class Calculator{
 
 				numbers.add(number); //Adds the number to the array list of numbers
 				operators.add(SUBTRACTION); //Adds the operation to the array list of operators
-				System.out.println("added " + number + " to numbers and " + event.getActionCommand() + " to operators");
+				//System.out.println("added " + number + " to numbers and " + event.getActionCommand() + " to operators");
 
 			} //close else if block
 
@@ -135,7 +136,7 @@ public class Calculator{
 
 				numbers.add(number); //Adds the number to the array list of numbers
 				operators.add(DIVISION); //Adds the operation to the array list of operators
-				System.out.println("added " + number + " to numbers and " + event.getActionCommand() + " to operators");
+				//System.out.println("added " + number + " to numbers and " + event.getActionCommand() + " to operators");
 
 			} //Close else if block
 
@@ -143,7 +144,7 @@ public class Calculator{
 
 				numbers.add(number); //Adds the number to the array list of numbers
 				operators.add(MULTIPLICATION); //Adds the operation to the array list of operators
-				System.out.println("added " + number + " to numbers and " + event.getActionCommand() + " to operators");
+				//System.out.println("added " + number + " to numbers and " + event.getActionCommand() + " to operators");
 
 			}//end of else if block
 
