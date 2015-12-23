@@ -159,7 +159,7 @@ public class Calculator{
 
 		else if(isIn(operators, name)){
 
-			buttons.addActionListener(new resulListener());
+			buttons.addActionListener(new resultListener());
 
 		}
 
