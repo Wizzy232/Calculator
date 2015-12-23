@@ -96,7 +96,7 @@ public class Calculator{
 		public void actionPerformed(ActionEvent event){ //Method that is fired when anynumber from 0 to 9 is clicked
 
 			//System.out.println("I am " + event.getActionCommand() + " and I am a number"); //Test to see if the listener goes to the right button
-			message = message + event.getCommand(); //Set the message to be displayed on the screen to equal the button pressed
+			message = message + event.getActionCommand(); //Set the message to be displayed on the screen to equal the button pressed
 			outPut.setText(message); //Set the output to equal message
 
 		}//close action performed method for number listener
