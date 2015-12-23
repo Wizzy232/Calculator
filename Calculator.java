@@ -39,7 +39,10 @@ public class Calculator{
 
 	public void go(){
 
+		Image image = new ImageIcon("icon.png").getImage(); //Image for the icon of the frame
+
 		Font bigFont = new Font("sanserif", Font.BOLD, 50); //Create font to be used by components
+		Font mediumFont = new Font("sanserif", Font.BOLD, 20); //Create font to be used by components
 
 		GridLayout grid = new GridLayout(4, 4); //Grid layout for buttons
 		grid.setVgap(1); //Set the vertical gap bemtween the buttons
@@ -68,6 +71,7 @@ public class Calculator{
 
 		outPut = new JTextArea(1, 20); //Makes the ouput area
 		outPut.setEditable(false); //Disallows users from entering values directly into result
+		outPut.setFont(mediumFont); //Set the font of output to medium font
 
 		Color backgroundColor = new Color(255, 255, 255); //Stores the color white to background color
 
@@ -87,6 +91,7 @@ public class Calculator{
 		frame.setContentPane(framePanel); //Set the content pane of the JFrame
 
 		frame.setSize(300, 500); ///Set the size
+		frame.setIconImage(image); //Set the icon of the frame to image
 		frame.setVisible(true); //Made visible
 
 	}//end go method
