@@ -21,8 +21,8 @@ public class Calculator{
 	String digit; //Contains each number just before the operator is clicked
 	double number; //Contains the number the digit is transformed to after an operator is clicked on
 	double total; //Contains the result to be displayed as final answer
-	ArrayList<double> numbers; //Contains the numbers the user has clicked on
-	ArrayList<int> operation; //Contains all the operation that should be performed on the number
+	ArrayList<Double> numbers; //Contains the numbers the user has clicked on
+	ArrayList<Integer> operation; //Contains all the operation that should be performed on the number
 	final int ADDITION = 1; //Int code for addition
 	final int SUBTRACTION = 2; //Int code for subtraction
 	final int DIVISION = 3; //Int code for division
@@ -103,7 +103,7 @@ public class Calculator{
 
 		public void actionPerformed(ActionEvent event){ //Method that is fired when any of the operators are called
 
-			System.out.println("I am " + event.getActionComman() + " and I am an operator"); //Test to see if the listener goes to the right operator
+			System.out.println("I am " + event.getActionCommand() + " and I am an operator"); //Test to see if the listener goes to the right operator
 
 		} //Close action performed method for the operator listener
 
@@ -113,7 +113,7 @@ public class Calculator{
 
 		public void actionPerformed(ActionEvent event){ //Method that is fired when the equal to button is fired
 
-			System.out.println("I am " + event.getActionComman() + " and I am a result finder"); //Test to see if the listener goes to the equal to button
+			System.out.println("I am " + event.getActionCommand() + " and I am a result finder"); //Test to see if the listener goes to the equal to button
 
 		} //Close action performed method for the result listener
 
