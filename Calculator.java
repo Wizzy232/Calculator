@@ -113,7 +113,7 @@ public class Calculator{
 			outPut.setText(message); //Display the message on the screen
 			number = Double.parseDouble(digit);//Get the value for calculation from digit
 			digit = "";//Initializies digit to empty
-			System.out.println("The digit to work with is " + number);
+			System.out.println("The digit to work with is " + number); //Test to check if the digit was gotten
 
 		} //Close action performed method for the operator listener
 
