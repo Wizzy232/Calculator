@@ -36,8 +36,9 @@ public class Calculator{
 
 		for(int i = 0; i < buttonNames.length; i++){ //Loop to create the 10 buttons
 
-			JButton button = new JButton(buttonNames[i]);
-			buttonPanel.add(button);
+			JButton button = new JButton(buttonNames[i]);//Creates new buttons with the names in the button names array
+			button.setBackground(new Color(255, 255, 255));//Set the background color of the buttons to white
+			buttonPanel.add(button);//Add the buttons to be button panel which has a grid layout gui
 			//System.out.println("button added" + buttonNames[i]);       //Test for button creation
 
 		}//Close for loop
