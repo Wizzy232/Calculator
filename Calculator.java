@@ -115,6 +115,40 @@ public class Calculator{
 			digit = "";//Initializies digit to empty
 			//System.out.println("The digit to work with is " + number); //Test to check if the digit was gotten
 
+			if(event.getActionCommand().equals("+")){//if statement to check if the operation is addition
+
+				numbers.add(number); //Adds the number to the array list of numbers
+				operators.add(ADDITION); //Adds the operation to the array list of operators
+
+			}//Close if block
+
+			else if(event.getActionCommand().equals("-")){//else if statement to check if the operation is subtraction
+
+				numbers.add(number); //Adds the number to the array list of numbers
+				operators.add(SUBTRACTION); //Adds the operation to the array list of operators
+
+			} //close else if block
+
+			else if(event.getActionCommand().equals("/")){//else if statement to check if the operation is division 
+
+				numbers.add(number); //Adds the number to the array list of numbers
+				operators.add(DIVISION); //Adds the operation to the array list of operators
+
+			} //Close else if block
+
+			else if(event.getActionCommand().equals("x")){//else if statement to check if the operation is multiplication 
+
+				numbers.add(number); //Adds the number to the array list of numbers
+				operators.add(MULTIPLICATION); //Adds the operation to the array list of operators
+
+			}//end of else if block
+
+			else{ //else block
+
+				System.out.println("Invalid operator");
+
+			} //end of else block
+
 		} //Close action performed method for the operator listener
 
 	} //close operator listener inner class
