@@ -17,7 +17,7 @@ public class Calculator{
 	JButton clear; //Clear button;
 	Label result; //Large label that show the result of an operation
 	String[] buttonNames = {"7", "8", "9", "+", "4", "5", "6", "-", "1", "2", "3", "/", "0", ".", "=", "x"}; //Contains the label that should show on all the buttons in the appropriate order
-	String message; //contains the text to display to the user when the user clicks a button
+	String message = ""; //contains the text to display to the user when the user clicks a button
 	String digit; //Contains each number just before the operator is clicked
 	double number; //Contains the number the digit is transformed to after an operator is clicked on
 	double total; //Contains the result to be displayed as final answer
@@ -108,6 +108,7 @@ public class Calculator{
 		public void actionPerformed(ActionEvent event){ //Method that is fired when any of the operators are called
 
 			//System.out.println("I am " + event.getActionCommand() + " and I am an operator"); //Test to see if the listener goes to the right operator
+			message = message + " " + event.getActionCommand() + " ";
 
 		} //Close action performed method for the operator listener
 
