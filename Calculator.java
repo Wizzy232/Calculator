@@ -89,6 +89,35 @@ public class Calculator{
 
 	}//end go method
 
+	public class numberListener implements ActionListener{ //Event listener for the numbers 0 through 9
+
+		public void actionPerformed(ActionEvent event){ //Method that is fired when anynumber from 0 to 9 is clicked
+
+			System.out.println("I am " + event.getActionCommand() + " and I am a number"); //Test to see if the listener goes to the right button
+
+		}//close action performed method for number listener
+
+	}//close number listener inner class
+
+	public class operatorListener implements ActionListener{ //Event listener for the four basic arithemetic operators
+
+		public void actionPerformed(ActionEvent event){ //Method that is fired when any of the operators are called
+
+			System.out.println("I am " + event.getActionComman() + " and I am an operator"); //Test to see if the listener goes to the right operator
+
+		} //Close action performed method for the operator listener
+
+	} //close operator listener inner class
+
+	public class resultListener implements ActionListener{ //Event listener for the equal to button
+
+		public void actionPerformed(ActionEvent event){ //Method that is fired when the equal to button is fired
+
+			System.out.println("I am " + event.getActionComman() + " and I am a result finder"); //Test to see if the listener goes to the equal to button
+
+		} //Close action performed method for the result listener
+
+	} //close result listener inner class
 
 
 }//end calculator class
