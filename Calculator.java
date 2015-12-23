@@ -175,6 +175,7 @@ public class Calculator{
 
 			//System.out.println("I am " + event.getActionCommand()); //Test to see if the listener goes to the clear button		
 			message = ""; //assigns message to empty
+			digit = ""; //assigns digit to empty
 			outPut.setText(message); //Clears all the message on the ouput screen
 			result.setText("0"); //assigns total to empty
 
