@@ -27,7 +27,7 @@ public class Calculator{
 
 	public void go(){
 
-		Font bigFont = new Font("sanserif", Font.BOLD, 100); //Create font to be used by components
+		Font bigFont = new Font("sanserif", Font.BOLD, 50); //Create font to be used by components
 
 		GridLayout grid = new GridLayout(4, 4); //Grid layout for buttons
 		grid.setVgap(1); //Set the vertical gap between the buttons
@@ -53,8 +53,11 @@ public class Calculator{
 		outPut = new JTextArea(1, 20); //Makes the ouput area
 		outPut.setEditable(false); //Disallows users from entering values directly into result
 
+		Color backgroundColor = new Color(255, 255, 255); //Stores the color white to background color
+
 		result = new Label("0", result.RIGHT);//Set the initial text of label to 0 and align right
 		result.setFont(bigFont);//Set the font of result to big font
+		result.setBackground(backgroundColor);//Sets the color of the label to whites
 
 		framePanel = new JPanel(); //instantiate the frame panel
 		framePanel.setLayout(new BoxLayout(framePanel, BoxLayout.Y_AXIS));//Set the layout manager for the frame panel
@@ -67,7 +70,7 @@ public class Calculator{
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //Set the JFrame close operation
 		frame.setContentPane(framePanel); //Set the content pane of the JFrame
 
-		frame.setSize(300, 500); ///Set the size
+		frame.setSize(300, 400); ///Set the size
 		frame.setVisible(true); //Made visible
 
 	}//end go method
