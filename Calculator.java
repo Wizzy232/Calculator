@@ -95,7 +95,7 @@ public class Calculator{
 
 		public void actionPerformed(ActionEvent event){ //Method that is fired when anynumber from 0 to 9 is clicked
 
-			System.out.println("I am " + event.getActionCommand() + " and I am a number"); //Test to see if the listener goes to the right button
+			//System.out.println("I am " + event.getActionCommand() + " and I am a number"); //Test to see if the listener goes to the right button
 
 		}//close action performed method for number listener
 
@@ -105,7 +105,7 @@ public class Calculator{
 
 		public void actionPerformed(ActionEvent event){ //Method that is fired when any of the operators are called
 
-			System.out.println("I am " + event.getActionCommand() + " and I am an operator"); //Test to see if the listener goes to the right operator
+			//System.out.println("I am " + event.getActionCommand() + " and I am an operator"); //Test to see if the listener goes to the right operator
 
 		} //Close action performed method for the operator listener
 
@@ -115,7 +115,7 @@ public class Calculator{
 
 		public void actionPerformed(ActionEvent event){ //Method that is fired when the equal to button is fired
 
-			System.out.println("I am " + event.getActionCommand() + " and I am a result finder"); //Test to see if the listener goes to the equal to button
+			//System.out.println("I am " + event.getActionCommand() + " and I am a result finder"); //Test to see if the listener goes to the equal to button
 
 		} //Close action performed method for the result listener
 
@@ -125,7 +125,7 @@ public class Calculator{
 
 		public void actionPerformed(ActionEvent event){//Method that is fired the the clear button is clicked
 
-			System.out.println("I am " + event.getActionCommand()); //Test to see if the listener goes to the clear button			
+			//System.out.println("I am " + event.getActionCommand()); //Test to see if the listener goes to the clear button			
 
 		} //close action performed method for clear listener
 
