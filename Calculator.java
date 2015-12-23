@@ -129,7 +129,7 @@ public class Calculator{
 
 			if(stringArray[i].equals(name)){
 
-				result == true;
+				result = true;
 
 			}
 
