@@ -18,7 +18,7 @@ public class Calculator{
 	Label result; //Large label that show the result of an operation
 	String[] buttonNames = {"7", "8", "9", "+", "4", "5", "6", "-", "1", "2", "3", "/", "0", ".", "=", "x"}; //Contains the label that should show on all the buttons in the appropriate order
 	String message = ""; //contains the text to display to the user when the user clicks a button
-	String digit; //Contains each number just before the operator is clicked
+	String digit = ""; //Contains each number just before the operator is clicked
 	double number; //Contains the number the digit is transformed to after an operator is clicked on
 	double total; //Contains the result to be displayed as final answer
 	ArrayList<Double> numbers; //Contains the numbers the user has clicked on
@@ -98,6 +98,7 @@ public class Calculator{
 			//System.out.println("I am " + event.getActionCommand() + " and I am a number"); //Test to see if the listener goes to the right button
 			message = message + event.getActionCommand(); //Set the message to be displayed on the screen to equal the button pressed
 			outPut.setText(message); //Set the output to equal message
+			digit = digit + event.getActionCommand(); //Stores the number pressed into the digit
 
 		}//close action performed method for number listener
 
@@ -108,8 +109,11 @@ public class Calculator{
 		public void actionPerformed(ActionEvent event){ //Method that is fired when any of the operators are called
 
 			//System.out.println("I am " + event.getActionCommand() + " and I am an operator"); //Test to see if the listener goes to the right operator
-			message = message + " " + event.getActionCommand() + " ";
-			outPut.setText(message);
+			message = message + " " + event.getActionCommand() + " ";//Set the message to be displayed on the screen
+			outPut.setText(message); //Display the message on the screen
+			number = Double.parseDouble(digit);//Get the value for calculation from digit
+			digit = "";//Initializies digit to empty
+			System.out.println("The digit to work with is " + number);
 
 		} //Close action performed method for the operator listener
 
