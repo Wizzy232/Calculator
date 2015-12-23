@@ -22,7 +22,7 @@ public class Calculator{
 	double number; //Contains the number the digit is transformed to after an operator is clicked on
 	double total; //Contains the result to be displayed as final answer
 	ArrayList<Double> numbers = new ArrayList<Double>(); //Contains the numbers the user has clicked on
-	ArrayList<Integer> operators = new ArrayList<Double>(); //Contains all the operation that should be performed on the number
+	ArrayList<Integer> operators = new ArrayList<Integer>(); //Contains all the operation that should be performed on the number
 	final int ADDITION = 1; //Int code for addition
 	final int SUBTRACTION = 2; //Int code for subtraction
 	final int DIVISION = 3; //Int code for division
