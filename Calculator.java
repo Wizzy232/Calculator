@@ -191,6 +191,9 @@ public class Calculator{
 			digit = ""; //assigns digit to empty
 			outPut.setText(message); //Clears all the message on the ouput screen
 			result.setText("0"); //assigns total to empty
+			number = 0;
+			numbers = new ArrayList<Double>();
+			operators = new ArrayList<Integer>();
 			//number = 0; //resets number to zero
 
 		} //close action performed method for clear listener
