@@ -23,6 +23,12 @@ public class Calculator{
 	double total; //Contains the result to be displayed as final answer
 	ArrayList<double> numbers; //Contains the numbers the user has clicked on
 	ArrayList<int> operation; //Contains all the operation that should be performed on the number
+	final int ADDITION = 1; //Int code for addition
+	final int SUBTRACTION = 2; //Int code for subtraction
+	final int DIVISION = 3; //Int code for division
+	final int MULTIPLICATION = 4; //Int code for multiplication
+	final int EQAULS = 5; //Int code for equals to
+
 	
 	public static void main(String[] args) {
 		
