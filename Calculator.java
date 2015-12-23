@@ -44,6 +44,7 @@ public class Calculator{
 		}//Close for loop
 
 		clear = new JButton("Clear"); //Instantiated the clear button so I can add it to the main panel
+		clear.setBackground(new Color(255, 255, 255)); //Sets the background color of the clear button to white
 
 		BorderLayout layout = new BorderLayout(); //Layout manager for the main panel
 		mainPanel = new JPanel(layout); //Instantiated main panel and added the new layout manager
