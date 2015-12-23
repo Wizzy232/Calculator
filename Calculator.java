@@ -17,6 +17,12 @@ public class Calculator{
 	JButton clear; //Clear button;
 	Label result; //Large label that show the result of an operation
 	String[] buttonNames = {"7", "8", "9", "+", "4", "5", "6", "-", "1", "2", "3", "/", "0", ".", "=", "x"}; //Contains the label that should show on all the buttons in the appropriate order
+	String message; //contains the text to display to the user when the user clicks a button
+	String digit; //Contains each number just before the operator is clicked
+	double number; //Contains the number the digit is transformed to after an operator is clicked on
+	double total; //Contains the result to be displayed as final answer
+	ArrayList<double> numbers; //Contains the numbers the user has clicked on
+	ArrayList<int> operation; //Contains all the operation that should be performed on the number
 	
 	public static void main(String[] args) {
 		
