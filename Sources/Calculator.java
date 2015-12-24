@@ -330,7 +330,29 @@ public class Calculator{
 
 		} //end of else block
 
-}
+	}
+
+	public class KeyBoardListener implements KeyListener{
+
+		public void keyPressed(KeyEvent event){
+
+			//System.out.println("" + event.getKeyCode() + "Key pressed");
+
+		}
+
+		public void keyReleased(KeyEvent event){
+
+			System.out.println("The key code equivalent of " + event.getKeyChar() + " is " + event.getKeyCode());
+
+		}
+
+		public void keyTyped(KeyEvent event){
+
+			//System.out.println("key tpyed");
+
+		}
+
+	}
 
 
 
