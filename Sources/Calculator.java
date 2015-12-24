@@ -116,51 +116,20 @@ public class Calculator{
 
 		public void actionPerformed(ActionEvent event){ //Method that is fired when any of the operators are called
 
-			//System.out.println("I am " + event.getActionCommand() + " and I am an operator"); //Test to see if the listener goes to the right operator
-			message = message + " " + event.getActionCommand() + " ";//Set the message to be displayed on the screen
-			outPut.setText(message); //Display the message on the screen
-			number = Double.parseDouble(digit);//Get the value for calculation from digit
-			digit = "";//Initializies digit to empty
-			//System.out.println("The digit to work with is " + number); //Test to check if the digit was gotten
+			if(digit.equals("")){//if block to check if the user has put a digit before pressing an operator 
 
-			if(event.getActionCommand().equals("+")){//if statement to check if the operation is addition
-				
-				//System.out.println("Here");
-				numbers.add(number); //Adds the number to the array list of numbers
-				operators.add(1); //Adds the operation to the array list of operators
-				//System.out.println("added " + number + " to numbers and " + event.getActionCommand() + " to operators");
+				message = message + total + " " + event.getActionCommand() + " "; //Sets the message to contain the total and the opeator
+				operatorListenerMethod(total, event); //runs the operator listener method with the total parameter and the operator
 
 			}//Close if block
 
-			else if(event.getActionCommand().equals("-")){//else if statement to check if the operation is subtraction
+			else{ //else block it digit does is not empty
 
-				numbers.add(number); //Adds the number to the array list of numbers
-				operators.add(SUBTRACTION); //Adds the operation to the array list of operators
-				//System.out.println("added " + number + " to numbers and " + event.getActionCommand() + " to operators");
+				message = message + " " + event.getActionCommand() + " "; //Sets the message to contain the operator clicked if the digit not empty
+				number = Double.parseDouble(digit); //Gets the number from the digit
+				operatorListenerMethod(number, event); //Runs the operator listener method with the number and the operator
 
-			} //close else if block
-
-			else if(event.getActionCommand().equals("/")){//else if statement to check if the operation is division 
-
-				numbers.add(number); //Adds the number to the array list of numbers
-				operators.add(DIVISION); //Adds the operation to the array list of operators
-				//System.out.println("added " + number + " to numbers and " + event.getActionCommand() + " to operators");
-
-			} //Close else if block
-
-			else if(event.getActionCommand().equals("x")){//else if statement to check if the operation is multiplication 
-
-				numbers.add(number); //Adds the number to the array list of numbers
-				operators.add(MULTIPLICATION); //Adds the operation to the array list of operators
-				//System.out.println("added " + number + " to numbers and " + event.getActionCommand() + " to operators");
-
-			}//end of else if block
-
-			else{ //else block
-
-				System.out.println("Invalid operator");
-
-			} //end of else block
+			}
 
 		} //Close action performed method for the operator listener
 
@@ -175,8 +144,9 @@ public class Calculator{
 
 			number = Double.parseDouble(digit);//Get the value for calculation from digit
 			digit = "";//Initializies digit to empty
-			numbers.add(number);
-			double ans = compute(operators, numbers);
+			numbers.add(number); // adds the last number before the equal to was clicked to the number array
+			Double ans = compute(operators, numbers); // performs the calculation and store the value in ans
+			total = ans; //The answer is stored in total for furture calculations
 			result.setText("" + ans);// Sets the result to the answer and displays it
 			reset(); //Initializes everything on the calculator
 
@@ -311,6 +281,56 @@ public class Calculator{
 		operators = new ArrayList<Integer>(); //empties the operators array
 
 	}
+
+	public void operatorListenerMethod(double num, ActionEvent event){
+
+		//System.out.println("I am " + event.getActionCommand() + " and I am an operator"); //Test to see if the listener goes to the right operator
+		//message = message + " " + event.getActionCommand() + " ";//Set the message to be displayed on the screen
+		outPut.setText(message); //Display the message on the screen
+		//number = Double.parseDouble(digit);//Get the value for calculation from digit
+		digit = "";//Initializies digit to empty
+		//System.out.println("The digit to work with is " + number); //Test to check if the digit was gotten
+
+		if(event.getActionCommand().equals("+")){//if statement to check if the operation is addition
+			
+			//System.out.println("Here");
+			numbers.add(num); //Adds the number to the array list of numbers
+			operators.add(1); //Adds the operation to the array list of operators
+			//System.out.println("added " + number + " to numbers and " + event.getActionCommand() + " to operators");
+
+		}//Close if block
+
+		else if(event.getActionCommand().equals("-")){//else if statement to check if the operation is subtraction
+
+			numbers.add(num); //Adds the number to the array list of numbers
+			operators.add(SUBTRACTION); //Adds the operation to the array list of operators
+			//System.out.println("added " + number + " to numbers and " + event.getActionCommand() + " to operators");
+
+		} //close else if block
+
+		else if(event.getActionCommand().equals("/")){//else if statement to check if the operation is division 
+
+			numbers.add(num); //Adds the number to the array list of numbers
+			operators.add(DIVISION); //Adds the operation to the array list of operators
+			//System.out.println("added " + number + " to numbers and " + event.getActionCommand() + " to operators");
+
+		} //Close else if block
+
+		else if(event.getActionCommand().equals("x")){//else if statement to check if the operation is multiplication 
+
+			numbers.add(num); //Adds the number to the array list of numbers
+			operators.add(MULTIPLICATION); //Adds the operation to the array list of operators
+			//System.out.println("added " + number + " to numbers and " + event.getActionCommand() + " to operators");
+
+		}//end of else if block
+
+		else{ //else block
+
+			System.out.println("Invalid operator");
+
+		} //end of else block
+
+}
 
 
 
