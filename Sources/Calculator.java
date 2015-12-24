@@ -40,6 +40,7 @@ public class Calculator{
 	public void go(){
 
 		Image image = new ImageIcon("../Assets/icon2.png").getImage(); //Image for the icon of the frame
+		Cursor mouse = new Cursor(Cursor.HAND_CURSOR); //hand cursor for when user hovers button
 
 		Font bigFont = new Font("sanserif", Font.BOLD, 50); //Create font to be used by components
 		Font mediumFont = new Font("sanserif", Font.BOLD, 20); //Create font to be used by components
@@ -54,6 +55,7 @@ public class Calculator{
 			JButton button = new JButton(buttonNames[i]);//Creates new buttons with the names in the button names array
 			button.setBackground(new Color(255, 255, 255));//Set the background color of the buttons to white
 			setListener(button, buttonNames[i]); //Set the action listener based on the type of button
+			button.setCursor(mouse); //Set the cursor for the button
 			buttonPanel.add(button);//Add the buttons to be button panel which has a grid layout gui
 			//System.out.println("button added" + buttonNames[i]);       //Test for button creation
 
@@ -62,6 +64,7 @@ public class Calculator{
 		clear = new JButton("Clear"); //Instantiated the clear button so I can add it to the main panel
 		clear.setBackground(new Color(255, 255, 255)); //Sets the background color of the clear button to white
 		clear.addActionListener(new clearListener()); //add an action listener for the clear button
+		clear.setCursor(mouse); //Set the cursor for the clear button to hand cursor
 
 		BorderLayout layout = new BorderLayout(); //Layout manager for the main panel
 		mainPanel = new JPanel(layout); //Instantiated main panel and added the new layout manager
