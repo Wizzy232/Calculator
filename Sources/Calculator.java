@@ -177,13 +177,8 @@ public class Calculator{
 			digit = "";//Initializies digit to empty
 			numbers.add(number);
 			double ans = compute(operators, numbers);
-			result.setText("" + ans);
-			message = "";
-			outPut.setText(message);
-			digit = "";
-			number = 0;
-			numbers = new ArrayList<Double>();
-			operators = new ArrayList<Integer>();
+			result.setText("" + ans);// Sets the result to the answer and displays it
+			reset(); //Initializes everything on the calculator
 
 
 		} //Close action performed method for the result listener
@@ -195,13 +190,9 @@ public class Calculator{
 		public void actionPerformed(ActionEvent event){//Method that is fired the the clear button is clicked
 
 			//System.out.println("I am " + event.getActionCommand()); //Test to see if the listener goes to the clear button		
-			message = ""; //assigns message to empty
-			digit = ""; //assigns digit to empty
-			outPut.setText(message); //Clears all the message on the ouput screen
-			result.setText("0"); //assigns total to empty
-			number = 0;
-			numbers = new ArrayList<Double>();
-			operators = new ArrayList<Integer>();
+			result.setText("" + 0); //sets the result to 0;
+			reset(); //Initializes everything on the calculator
+			outPut.setText(message); //Changes the output screen to empty
 			//number = 0; //resets number to zero
 
 		} //close action performed method for clear listener
@@ -309,6 +300,17 @@ public class Calculator{
 		return total;
 
 	}// Close method
+
+	public void reset(){
+
+		message = ""; //assigns message to empty
+		//outPut.setText(message); //Not needed
+		digit = ""; //assigns digit to empty
+		number = 0; //assigns number to zero
+		numbers = new ArrayList<Double>(); //empties the numbers array 
+		operators = new ArrayList<Integer>(); //empties the operators array
+
+	}
 
 
 
