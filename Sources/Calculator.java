@@ -41,6 +41,7 @@ public class Calculator{
 
 		Image image = new ImageIcon("../Assets/icon2.png").getImage(); //Image for the icon of the frame
 		Cursor mouse = new Cursor(Cursor.HAND_CURSOR); //hand cursor for when user hovers button
+		keyListeners listener = new keyListeners();
 
 		Font bigFont = new Font("sanserif", Font.BOLD, 50); //Create font to be used by components
 		Font mediumFont = new Font("sanserif", Font.BOLD, 20); //Create font to be used by components
@@ -90,11 +91,13 @@ public class Calculator{
 		framePanel.add(mainPanel); //Add the main panel to the frame panel
 
 		frame = new JFrame("Calculator"); //Instantiated the JFrame
+		frame.addKeyListener(listener); //Adds the listener class to the jframe
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //Set the JFrame close operation
 		frame.setContentPane(framePanel); //Set the content pane of the JFrame
 
 		frame.setSize(300, 500); ///Set the size
 		frame.setIconImage(image); //Set the icon of the frame to image
+		frame.requestFocusInWindow();
 		frame.setVisible(true); //Made visible
 
 	}//end go method
@@ -332,7 +335,7 @@ public class Calculator{
 
 	}
 
-	public class KeyBoardListener implements KeyListener{
+	public class keyListeners implements KeyListener{
 
 		public void keyPressed(KeyEvent event){
 
