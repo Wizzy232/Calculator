@@ -39,7 +39,7 @@ public class Calculator{
 
 	public void go(){
 
-		Image image = new ImageIcon("icon.png").getImage(); //Image for the icon of the frame
+		Image image = new ImageIcon("../Assets/icon2.png").getImage(); //Image for the icon of the frame
 
 		Font bigFont = new Font("sanserif", Font.BOLD, 50); //Create font to be used by components
 		Font mediumFont = new Font("sanserif", Font.BOLD, 20); //Create font to be used by components
